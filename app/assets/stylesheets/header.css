@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: whitesmoke;
 }
 
 .header_bar {
@@ -9,9 +10,11 @@ body {
   border-bottom: 1px solid grey;
 }
 
-h1.title_bar {
-  margin-left: 50px;
-
+h1.title_bar,
+h1.title_bar a {
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
 }
 
 .nav_bar,
