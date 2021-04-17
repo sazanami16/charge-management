@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header_bar">
+        <h1 class="title_bar">
+          Charge Management
+        </h1>
+          <div class="nav_bar">
+            <%= link_to "ログアウト", "#", class: "post" %>
+            <%= link_to "項目追加", "#", class: "post" %>
+          </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
