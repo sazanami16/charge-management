@@ -1,0 +1,57 @@
+<div class="contents">
+  <div class="container">
+    <%= form_with(model: @charge, local:true) do |f| %>
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">項目名</div>
+           <%= f.text_field :tax_name, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">金額</div>
+           <%= f.text_field :money, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">納付期限</div>
+           <%= f.text_field :deadline, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">管轄所（任意）</div>
+           <%= f.text_field :place, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">住所（任意）</div>
+           <%= f.text_field :address, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">電話番号（任意）</div>
+           <%= f.text_field :number, class: "form-box" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-wrap">
+          <div class="form-title">支払い方法（任意）</div>
+           <%= f.text_field :payment, class: "form-box" %>
+        </div>
+      </div>     
+      <div class="submit">
+        <%= f.submit "保存", class:"submit-btn" %>
+      </div> 
+    <% end %>
+  </div>
+</div>
