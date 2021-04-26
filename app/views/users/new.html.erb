@@ -24,12 +24,13 @@
 
       <div class="form-group">
         <div class="form-wrap">
-          <div class="form-title">パスワード</div>
+          <div class="form-title">パスワード（確認）</div>
            <%= f.password_field :passwword_comfirmation, class: "form-box" %>
         </div>
       </div>
       <div class="submit">
            <%= f.submit "保存", class:"submit-btn" %>
+           <%= link_to "ログイン", login_path %>
       </div> 
     <% end %>
   </div>
