@@ -13,11 +13,16 @@
     <header class="header">
       <div class="header_bar">
         <h1 class="title_bar">
-           <%= link_to "Charge Management", "#" %>
+           <%= link_to "Charge Management", "/" %>
         </h1>
           <div class="nav_bar">
-            <%= link_to "ログアウト", logout_path, method: :delete, class: "post" %>
-            <%= link_to "項目追加", new_charge_path, method: :get, class: "post" %>
+            <% if logged_in? %>
+                <%= link_to 'ログアウト', logout_path, method: :delete, class: "post" %>
+                <%= link_to "項目追加", new_charge_path, method: :get, class: "post" %>
+            <% else %>
+                <%= link_to 'ログイン', login_path, class: "post" %>
+                <%= link_to '新規登録', signup_path, class: "post" %>
+            <% end %>
           </div>
       </div>
     </header>
